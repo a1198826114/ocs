@@ -9,12 +9,14 @@
     "prod": "cross-env NODE_ENV=development  NODE_APIENV=production  webpack-dev-server --config build/webpack.dev.config.js --color --progress",
     "build": "npm run clean && cross-env NODE_ENV=production  NODE_APIENV=production webpack --config build/webpack.build.config.js",
     "prepare": "husky install",
-    "lint": "eslint \"app/*{.js,.jsx,.ts,.tsx}\" --fix",
-    "prettier-format":"prettier --config .prettierrc.js \"(app/*{.js,.jsx}|app/**/*{.js,.jsx})\" --write"
-   
+    "lint": "eslint \"app/**/*{.js,.jsx}\" --fix",
+    "prettier-format": "prettier --config .prettierrc.js \"app/**/*{.js,.jsx}\" --write"
   },
   "lint-staged": {
-    "./app/*.{js,jsx}": "npm run lint"
+    "app/**/*{.js,.jsx}": [
+      "npm run lint",
+      "npm run prettier-format"
+    ]
   },
   "author": "",
   "license": "ISC",
