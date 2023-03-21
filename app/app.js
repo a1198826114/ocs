@@ -3,7 +3,7 @@ import typeMapping from "./utils/typeMapping";
 function App({ pageType }) {
   useEffect(() => {
     if (typeof pageType === "number") {
-      typeMapping["ocs1"]().then((value) => {
+      typeMapping["ocs1" ]().then((value) => {
         setPage(value.default);
       });
     }
@@ -12,4 +12,4 @@ function App({ pageType }) {
   return <div>app4{page}</div>;
 }
 
-export default App;
+export default App;  
