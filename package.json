@@ -12,7 +12,7 @@
     "lint": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx}": "prettier --write --ignore-unknown"
+    "app/*.{js,jsx}": "prettier --write --ignore-unknown"
   },
   "author": "",
   "license": "ISC",
