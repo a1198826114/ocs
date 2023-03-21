@@ -5,7 +5,7 @@ function App({ pageType }) {
     if (typeof pageType === "number") {
       typeMapping["ocs1"  ]().then((value) => {
         setPage(value.default);
-      });
+      }); 
     }
   }, [pageType]) ; 
   const [page, setPage] = useState("");
