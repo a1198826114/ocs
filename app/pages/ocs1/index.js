@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Ocs1() {
-  return (
-    <div>Ocs3</div>
-  )
+  return <div>Ocs3</div>;
 }
