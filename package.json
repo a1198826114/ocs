@@ -13,7 +13,8 @@
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "**/*.{js,jsx}": "npm run lint"
+    "**/*.{js,jsx}": "npm run lint",
+    "**/*.{js,jsx,tsx,ts,less,md}": [ "prettier --write" ] 
   },
   "author": "",
   "license": "ISC",
