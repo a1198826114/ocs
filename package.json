@@ -9,7 +9,8 @@
     "prod": "cross-env NODE_ENV=development  NODE_APIENV=production  webpack-dev-server --config build/webpack.dev.config.js --color --progress",
     "build": "npm run clean && cross-env NODE_ENV=production  NODE_APIENV=production webpack --config build/webpack.build.config.js",
     "prepare": "husky install",
-    "lint": "eslint app --fix --ext .js,.jsx"
+    "lint": "eslint app --fix --ext .js,.jsx",
+    "lint-staged": "lint-staged"
   },
   "author": "",
   "license": "ISC",
