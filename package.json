@@ -9,10 +9,11 @@
     "prod": "cross-env NODE_ENV=development  NODE_APIENV=production  webpack-dev-server --config build/webpack.dev.config.js --color --progress",
     "build": "npm run clean && cross-env NODE_ENV=production  NODE_APIENV=production webpack --config build/webpack.build.config.js",
     "prepare": "husky install",
-    "lint": "lint-staged"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx app",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "app/*.{js,jsx}": "prettier --write --ignore-unknown"
+    "**/*.{js,jsx}": "npm run lint"
   },
   "author": "",
   "license": "ISC",
