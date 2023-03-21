@@ -7,7 +7,7 @@ function App({ pageType }) {
         setPage(value.default);
       });
     }
-  }, [pageType]);
+  }, [pageType]) ; 
   const [page, setPage] = useState("");
   return <div>app4{page}</div>;
 }
